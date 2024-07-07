@@ -1,0 +1,10 @@
+services:
+  backapp:
+    image: backapp:latest
+      
+  frontapp:
+    image: frontapp:latest
+    ports:
+      - 8080:8080
+    environment:
+      BACK_URL: http://backapp:8080
